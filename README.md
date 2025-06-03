@@ -64,3 +64,34 @@
               +--------------------------------------------------+
 
 </code></pre>
+---
+### ___搭建本地微服務___
+用 Node.js（Express）建立三層微服務，並模擬請求從 A → B → C 的流程，為追蹤系統（Tracing）鋪路
+
+---
+*目錄結構*
+<pre><code>
+microservices-demo/
+├── service-a/
+│   └── index.js
+├── service-b/
+│   └── index.js
+├── service-c/
+│   └── index.js
+└── docker-compose.yml   # （第 3 章會開始用）
+
+</code></pre>
+---
+流程圖
+<pre><code>
+[ 使用者請求 ]
+       |
+   [Service A] #A：接收 /hello，呼叫 B 並包裝回傳
+       |
+   [Service B] #B：處理 /step2，呼叫 C 並包裝回傳
+       |
+   [Service C] #C：處理 /step3，單純回應資料
+       |
+   回傳結果 → 使用者
+</code></pre>
+
