@@ -1,0 +1,7 @@
+version: '3'
+services:
+  jaeger:
+    image: jaegertracing/all-in-one:1.49
+    ports:
+      - "16686:16686"  # UI
+      - "4318:4318"    # OTLP HTTP 預設 port

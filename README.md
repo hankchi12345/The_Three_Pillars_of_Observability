@@ -9,7 +9,7 @@
 ### 第 7 章	警報系統設計：Prometheus + Alertmanager
 ### 第 8 章	總結：打造一個可擴充的監控架構
 ---
-## __什麼是觀測性？__
+## __第 1 章 什麼是觀測性？__
 #### *1.1觀測性（Observability）來自控制工程領域，意思是：*
 
 從系統輸出的訊號，推斷其內部運作狀況的能力。
@@ -65,7 +65,7 @@
 
 </code></pre>
 ---
-### ___搭建本地微服務___
+### ___第 2 章 搭建本地微服務___
 用 Node.js（Express）建立三層微服務，並模擬請求從 A → B → C 的流程，為追蹤系統（Tracing）鋪路
 
 ---
@@ -114,7 +114,16 @@ node service-c/index.js
 GET http://localhost:3000/hello
 # 回傳內容： A → B → C
 </code></pre>
+---
+### __第 3 章 加入 Tracing：OpenTelemetry + Jaeger__
 
+#### *3.1. 要用到的工具*
 
+| 工具                                    | 功能                | 備註           |
+| ------------------------------------- | ----------------- | ------------ |
+| `@opentelemetry/sdk-node`             | Node.js 的核心觀測 SDK | 每個服務都裝       |
+| `@opentelemetry/instrumentation-http` | 自動追蹤 HTTP 呼叫      |              |
+| `@opentelemetry/exporter-jaeger`      | 將資料匯出到 Jaeger     |              |
+| Jaeger                                | 可視化請求流向的 UI       | 我們用 Docker 起 |
 
 
