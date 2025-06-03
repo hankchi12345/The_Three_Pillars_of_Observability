@@ -69,7 +69,7 @@
 用 Node.js（Express）建立三層微服務，並模擬請求從 A → B → C 的流程，為追蹤系統（Tracing）鋪路
 
 ---
-*目錄結構*
+#### *2.1 目錄結構*
 <pre><code>
 microservices-demo/
 ├── service-a/
@@ -82,7 +82,7 @@ microservices-demo/
 
 </code></pre>
 ---
-流程圖
+#### *流程圖*
 <pre><code>
 [ 使用者請求 ]
        |
@@ -94,4 +94,27 @@ microservices-demo/
        |
    回傳結果 → 使用者
 </code></pre>
+
+#### *2.2  啟動與測試*
+每個服務都裝上 Express：
+<pre><code>
+cd service-a && npm init -y && npm i express axios
+cd ../service-b && npm init -y && npm i express axios
+cd ../service-c && npm init -y && npm i express
+</code></pre>
+接著:
+<pre><code>
+# 開三個終端機
+node service-a/index.js
+node service-b/index.js
+node service-c/index.js
+</code></pre>
+測試：
+<pre><code>
+GET http://localhost:3000/hello
+# 回傳內容： A → B → C
+</code></pre>
+
+
+
 
