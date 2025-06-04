@@ -10,6 +10,7 @@
 ### 第 8 章	總結：打造一個可擴充的監控架構
 ---
 ## __第 1 章 什麼是觀測性？__
+---
 #### *1.1觀測性（Observability）來自控制工程領域，意思是：*
 
 從系統輸出的訊號，推斷其內部運作狀況的能力。
@@ -116,7 +117,7 @@ GET http://localhost:3000/hello
 </code></pre>
 ---
 ### __第 3 章 加入 Tracing：OpenTelemetry + Jaeger__
-
+---
 #### *3.1. 要用到的工具*
 
 | 工具                                    | 功能                | 備註           |
@@ -166,4 +167,21 @@ curl http://localhost:3000/hello
 ### 如圖到Jaeger 的網頁去查看service運作
 ![Jaeger UI 示意圖](./image/Jaeger_UI.PNG)
 ![Jaeger Services 示意圖](./image/JaegerServices_.PNG)
+
+### ___第 4 章 加入 Metrics：Prometheus + Exporter___
+---
+#### 4.1. 架構總覽
+<pre><code>
+        +-------------+
+        |  Grafana    | ←── 可視化監控圖表
+        +-------------+
+              ↑
+        +-------------+
+        | Prometheus  | ←── 抓 /metrics
+        +-------------+
+          ↑     ↑     ↑
+        A       B     C     ← 每個服務都有 /metrics endpoint
+
+</code></pre>
+
 

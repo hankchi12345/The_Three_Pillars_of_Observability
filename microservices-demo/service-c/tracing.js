@@ -19,4 +19,4 @@ const sdk = new NodeSDK({
 });
 
 sdk.start();
-console.log(' OpenTelemetry SDK started for service-a'); 
+console.log(' OpenTelemetry SDK started for service-c'); 

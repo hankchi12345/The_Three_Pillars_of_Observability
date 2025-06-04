@@ -1,9 +1,14 @@
-require('./tracing'); //(第三章 會用到一、二章可以先註解掉這一行)
+require('./tracing'); // 初始化 OpenTelemetry
+
 const express = require('express');
 const app = express();
+const port = 3002; // 
 
-app.get('/step3', (req, res) => {
+app.get('/', (req, res) => {
   res.send('C');
 });
 
-app.listen(3002, () => console.log('Service C running on port 3002'));
+app.listen(port, () => {
+  console.log(`Service C listening on port ${port}`);
+});
+
