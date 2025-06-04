@@ -164,6 +164,6 @@ curl http://localhost:3000/hello
 </code></pre>
 ---
 ### 如圖到Jaeger 的網頁去查看service運作
-![Jaeger UI 示意圖](./image/jaeger-ui.png)
-![Jaeger Services 示意圖](./image/jaeger-services.png)
+![Jaeger UI 示意圖](./image/jaeger ui.png)
+![Jaeger Services 示意圖](./image/JaegerServices_.PNG)
 
