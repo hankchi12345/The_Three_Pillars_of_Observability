@@ -1,3 +1,5 @@
+require('./tracing'); //(第三章 會用到一、二章可以先註解掉這一行)
+
 const express = require('express');
 const axios = require('axios');
 const app = express();

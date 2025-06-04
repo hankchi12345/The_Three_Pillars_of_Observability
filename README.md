@@ -126,4 +126,44 @@ GET http://localhost:3000/hello
 | `@opentelemetry/exporter-jaeger`      | 將資料匯出到 Jaeger     |              |
 | Jaeger                                | 可視化請求流向的 UI       | 我們用 Docker 起 |
 
+#### *3.2 加入 Jaeger 到 docker-compose*
+
+<pre><code>
+version: '3'
+services:
+  jaeger:
+    image: jaegertracing/all-in-one:1.49
+    ports:
+      - "16686:16686"  # UI
+      - "4318:4318"    # OTLP HTTP 預設 port
+</code></pre>
+
+啟動：
+<pre><code>
+docker-compose up -d
+#打開 Jaeger UI：
+#http://localhost:16686注意如果使用的是虛擬機，要在宿主機上訪問網站localhost就是虛擬機的IP + :16686)
+</code></pre>
+
+#### *3.3. 在每個 Service 加入 Tracing*
+建立 tracing.js（每個 service 目錄都需要）
+### **service-a/tracing.js 有範例**
+---
+#### 安裝依賴（每個 service 都要）
+<pre><code>
+npm install \
+  @opentelemetry/sdk-node \
+  @opentelemetry/auto-instrumentations-node \
+  @opentelemetry/exporter-trace-otlp-http
+</code></pre>
+#### 啟動三個服務：
+`node service-a/index.js`、`node service-b/index.js`、`node service-c/index.js`
+<pre><code>
+發送請求給 A：
+curl http://localhost:3000/hello
+</code></pre>
+---
+### 如圖到Jaeger 的網頁去查看service運作
+![Jaeger UI 示意圖](./image/jaeger-ui.png)
+![Jaeger Services 示意圖](./image/jaeger-services.png)
 
