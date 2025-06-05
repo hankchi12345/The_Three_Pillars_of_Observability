@@ -172,16 +172,39 @@ curl http://localhost:3000/hello
 ---
 #### 4.1. 架構總覽
 <pre><code>
-        +-------------+
-        |  Grafana    | ←── 可視化監控圖表
-        +-------------+
-              ↑
-        +-------------+
-        | Prometheus  | ←── 抓 /metrics
-        +-------------+
-          ↑     ↑     ↑
-        A       B     C     ← 每個服務都有 /metrics endpoint
+┌────────────┐        ┌────────────┐        ┌────────────┐
+│ Service A  │──────▶│ Service B  │──────▶│ Service C  │
+│  /call-b   │        │ /call-c   │        │    /       │
+└─────┬──────┘        └─────┬──────┘        └────┬───────┘
+      │                     │                    │
+      ▼                     ▼                    ▼
+  /metrics              /metrics              /metrics
+      │                     │                    │
+      └──────┬──────────────┴──────────────┬─────┘
+             ▼                             ▼
+          ┌────────────────────────────────────┐
+          │            Prometheus              │
+          │    /targets  /graph /alerts        │
+          └────────────────────────────────────┘
 
 </code></pre>
+---
+#### 技術組件
+元件	說明
+prom-client	Node.js 服務中的 exporter，用來自定義指標並啟動 /metrics endpoint。
 
+Prometheus	時序資料收集器，定時透過 HTTP 抓 /metrics 內容。
 
+Express	提供 REST API 與 metrics endpoint 的微服務框架。
+
+<pre><code>
+//使用 curl 測試任一服務：
+curl http://localhost:3000/metrics
+//打開 Prometheus UI:
+http://localhost:9090
+//查詢:
+http_requests_total
+//應該能看到三個 label（service A、B、C）的累積請求次數。
+</code></pre>
+如圖:
+![Prometheus UI 示意圖](./image/Prometheus_UI.PNG)

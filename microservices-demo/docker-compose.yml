@@ -3,5 +3,13 @@ services:
   jaeger:
     image: jaegertracing/all-in-one:1.49
     ports:
-      - "16686:16686"  # UI
-      - "4318:4318"    # OTLP HTTP 預設 port
+      - "16686:16686"
+      - "4318:4318"
+
+  prometheus:
+    image: prom/prometheus:v2.52.0
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+
