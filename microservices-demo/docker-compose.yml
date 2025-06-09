@@ -1,15 +1,121 @@
-version: '3'
-services:
-  jaeger:
-    image: jaegertracing/all-in-one:1.49
-    ports:
-      - "16686:16686"
-      - "4318:4318"
+version: '3.8'
 
+networks:
+  observability-network:
+    name: observability-network
+    driver: bridge
+
+volumes:
+  loki_data: {}
+  prometheus_data: {}
+  grafana_data: {}
+  tempo_data: {}
+
+services:
+  # --- Observability Stack ---
   prometheus:
-    image: prom/prometheus:v2.52.0
+    image: prom/prometheus:v2.51.1
+    container_name: prometheus
+    command: --config.file=/etc/prometheus/prometheus.yml --web.enable-remote-write-receiver
     ports:
       - "9090:9090"
     volumes:
       - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    networks:
+      - observability-network
+    restart: unless-stopped
+
+  loki:
+    image: grafana/loki:2.9.4
+    container_name: loki
+    ports:
+      - "3100:3100"
+    volumes:
+      - ./loki/local-config.yaml:/etc/loki/local-config.yaml
+      - ./loki/data:/var/loki
+    networks:
+      - observability-network
+    restart: unless-stopped
+
+  promtail:
+    image: grafana/promtail:2.9.4
+    container_name: promtail
+    command: -config.file=/etc/promtail/promtail.yaml
+    volumes:
+      - ./promtail/promtail.yaml:/etc/promtail/promtail.yaml
+      - ./services/service-a/logs:/var/log/services/service-a:ro
+      - ./services/service-b/logs:/var/log/services/service-b:ro
+      - ./services/service-c/logs:/var/log/services/service-c:ro
+    networks:
+      - observability-network
+    restart: unless-stopped
+
+  tempo:
+    image: grafana/tempo:2.4.2
+    container_name: tempo
+    command: -config.file=/etc/tempo/tempo-local.yaml
+    ports:
+      - "3200:3200" # Tempo UI
+      - "4317:4317" # OTLP gRPC receiver
+      - "4318:4318" # OTLP HTTP receiver
+    volumes:
+      - ./tempo/tempo-local.yaml:/etc/tempo/tempo-local.yaml
+      - tempo_data:/tmp/tempo
+    networks:
+      - observability-network
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana:10.4.2
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana/provisioning/:/etc/grafana/provisioning/
+    networks:
+      - observability-network
+    depends_on:
+      - prometheus
+      - loki
+      - tempo
+    restart: unless-stopped
+
+  # --- Microservices ---
+  service-a:
+    build: ./services/service-a
+    container_name: service-a
+    environment:
+      SERVICE_NAME: service-a
+      PORT: 20000
+    ports:
+      - "20000:20000"
+    networks:
+      - observability-network
+    restart: unless-stopped
+
+  service-b:
+    build: ./services/service-b
+    container_name: service-b
+    environment:
+      SERVICE_NAME: service-b
+      PORT: 20001
+    ports:
+      - "20001:20001"
+    networks:
+      - observability-network
+    restart: unless-stopped
+
+  service-c:
+    build: ./services/service-c
+    container_name: service-c
+    environment:
+      SERVICE_NAME: service-c
+      PORT: 20002
+    ports:
+      - "20002:20002"
+    networks:
+      - observability-network
+    restart: unless-stopped
 

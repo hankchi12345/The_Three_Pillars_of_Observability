@@ -208,3 +208,17 @@ http_requests_total
 </code></pre>
 如圖:
 ![Prometheus UI 示意圖](./image/Prometheus_UI.PNG)
+---
+### __第 5 章 加入 Logs：Loki + Grafana 日誌串流__
+#### 5.1. 架構圖
+<pre><code>
+   ┌──────────┐      ┌─────────┐      ┌────────┐      ┌─────────┐
+   │ service  │ ──►  │ Promtail│ ──►  │  Loki  │ ──►  │ Grafana │
+   │  (Node)  │      │ (log 履帶)│      │ (儲存) │      │ (展現)  │
+   └──────────┘      └─────────┘      └────────┘      └─────────┘
+        ▲
+        │
+     console.log
+
+</code></pre>
+

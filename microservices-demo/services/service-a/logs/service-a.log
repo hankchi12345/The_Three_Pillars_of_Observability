@@ -1,0 +1,45 @@
+{"level":30,"time":1749442964868,"pid":19,"hostname":"3484d8800185","msg":"service-a running at 20000"}
+{"level":30,"time":1749448101036,"pid":19,"hostname":"9de906c16c5e","msg":"service-a running at 20000"}
+{"level":30,"time":1749449366924,"pid":19,"hostname":"5b055631d65e","msg":"service-a running at 20000"}
+{"level":30,"time":1749450135737,"pid":19,"hostname":"945ce5b1cdd7","msg":"service-a running at 20000"}
+{"level":30,"time":1749450833394,"pid":18,"hostname":"3cdda30d7b70","msg":"Service service-a is running on port 20000"}
+{"level":30,"time":1749450943528,"pid":18,"hostname":"3cdda30d7b70","msg":"Hello request received for service-a"}
+{"level":30,"time":1749451013757,"pid":18,"hostname":"3cdda30d7b70","msg":"Hello request received for service-a"}
+{"level":30,"time":1749451014690,"pid":18,"hostname":"3cdda30d7b70","msg":"Hello request received for service-a"}
+{"level":30,"time":1749451015664,"pid":18,"hostname":"3cdda30d7b70","msg":"Hello request received for service-a"}
+{"level":30,"time":1749451016564,"pid":18,"hostname":"3cdda30d7b70","msg":"Hello request received for service-a"}
+{"level":50,"time":1749451082992,"pid":18,"hostname":"3cdda30d7b70","msg":"Service B unreachable from A: Request failed with status code 500"}
+{"level":50,"time":1749451096799,"pid":18,"hostname":"3cdda30d7b70","msg":"Service B unreachable from A: Request failed with status code 500"}
+{"level":30,"time":1749451759905,"pid":19,"hostname":"947abe5de992","msg":"Service service-a is running on port 20000"}
+{"level":30,"time":1749451768773,"pid":19,"hostname":"947abe5de992","msg":"Hello request received for service-a"}
+{"level":30,"time":1749451882637,"pid":19,"hostname":"947abe5de992","msg":"Hello request received for service-a"}
+{"level":50,"time":1749451943514,"pid":19,"hostname":"947abe5de992","msg":"Service B unreachable from A: Request failed with status code 500"}
+{"level":50,"time":1749452168989,"pid":19,"hostname":"947abe5de992","msg":"Service B unreachable from A: Request failed with status code 500"}
+{"level":50,"time":1749452175093,"pid":19,"hostname":"947abe5de992","msg":"Service B unreachable from A: Request failed with status code 500"}
+{"level":30,"time":1749452412748,"pid":19,"hostname":"477180e65674","msg":"Service service-a is running on port 20000"}
+{"level":50,"time":1749452416478,"pid":19,"hostname":"477180e65674","msg":"Service B unreachable from A: Request failed with status code 500"}
+{"level":50,"time":1749452641681,"pid":19,"hostname":"477180e65674","msg":"Service B unreachable from A: Request failed with status code 500"}
+{"level":50,"time":1749452643734,"pid":19,"hostname":"477180e65674","msg":"Service B unreachable from A: Request failed with status code 500"}
+{"level":50,"time":1749452644479,"pid":19,"hostname":"477180e65674","msg":"Service B unreachable from A: Request failed with status code 500"}
+{"level":50,"time":1749452645074,"pid":19,"hostname":"477180e65674","msg":"Service B unreachable from A: Request failed with status code 500"}
+{"level":50,"time":1749452645895,"pid":19,"hostname":"477180e65674","msg":"Service B unreachable from A: Request failed with status code 500"}
+{"level":50,"time":1749452663415,"pid":19,"hostname":"477180e65674","msg":"Service B unreachable from A: Request failed with status code 500"}
+{"level":50,"time":1749452808530,"pid":19,"hostname":"477180e65674","msg":"Service B unreachable from A: Request failed with status code 500"}
+{"level":50,"time":1749452854475,"pid":19,"hostname":"477180e65674","msg":"Service B unreachable from A: Request failed with status code 500"}
+{"level":50,"time":1749452935978,"pid":19,"hostname":"477180e65674","msg":"Service B unreachable from A: Request failed with status code 500"}
+{"level":30,"time":1749453072681,"pid":19,"hostname":"7efb3eddad4b","msg":"Service service-a is running on port 20000"}
+{"level":50,"time":1749453074604,"pid":19,"hostname":"7efb3eddad4b","msg":"Service B unreachable from A: Request failed with status code 500"}
+{"level":50,"time":1749453078512,"pid":19,"hostname":"7efb3eddad4b","msg":"Service B unreachable from A: Request failed with status code 500"}
+{"level":50,"time":1749453097128,"pid":19,"hostname":"7efb3eddad4b","msg":"Service B unreachable from A: Request failed with status code 500"}
+{"level":50,"time":1749453408345,"pid":19,"hostname":"7efb3eddad4b","msg":"Service B unreachable from A: Request failed with status code 500"}
+{"level":50,"time":1749454796224,"pid":19,"hostname":"7efb3eddad4b","msg":"Service B unreachable from A: Request failed with status code 500"}
+{"level":30,"time":1749454866389,"pid":19,"hostname":"da634cafb408","msg":"Service service-a is running on port 20000"}
+{"level":50,"time":1749454869208,"pid":19,"hostname":"da634cafb408","msg":"Service B unreachable from A: connect ECONNREFUSED 172.18.0.4:20001"}
+{"level":50,"time":1749454871142,"pid":19,"hostname":"da634cafb408","msg":"Service B unreachable from A: getaddrinfo ENOTFOUND service-b"}
+{"level":50,"time":1749454871892,"pid":19,"hostname":"da634cafb408","msg":"Service B unreachable from A: getaddrinfo ENOTFOUND service-b"}
+{"level":50,"time":1749454872702,"pid":19,"hostname":"da634cafb408","msg":"Service B unreachable from A: connect ECONNREFUSED 172.18.0.4:20001"}
+{"level":50,"time":1749455018471,"pid":19,"hostname":"da634cafb408","msg":"Service B unreachable from A: getaddrinfo ENOTFOUND service-b"}
+{"level":50,"time":1749455021037,"pid":19,"hostname":"da634cafb408","msg":"Service B unreachable from A: getaddrinfo ENOTFOUND service-b"}
+{"level":50,"time":1749455022156,"pid":19,"hostname":"da634cafb408","msg":"Service B unreachable from A: getaddrinfo ENOTFOUND service-b"}
+{"level":30,"time":1749455431960,"pid":19,"hostname":"d9977f22a1b8","msg":"Service service-a is running on port 20000"}
+{"level":30,"time":1749456846578,"pid":18,"hostname":"4eace73529c1","msg":"Service service-a is running on port 20000"}

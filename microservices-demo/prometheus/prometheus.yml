@@ -1,16 +1,24 @@
 global:
-  scrape_interval: 5s
+  scrape_interval: 15s
 
 scrape_configs:
-  - job_name: 'service-a'
+  - job_name: 'prometheus'
     static_configs:
-      - targets: ['172.17.0.1:3000']
+      - targets: ['localhost:9090']
 
-  - job_name: 'service-b'
+  - job_name: 'loki'
     static_configs:
-      - targets: ['172.17.0.1:3001']
+      - targets: ['loki:3100']
 
-  - job_name: 'service-c'
+  - job_name: 'grafana'
     static_configs:
-      - targets: ['172.17.0.1:3002']
+      - targets: ['grafana:3000']
 
+  - job_name: 'tempo'
+    static_configs:
+      - targets: ['tempo:3200']
+
+  - job_name: 'microservices'
+    metrics_path: /metrics
+    static_configs:
+      - targets: ['service-a:20000', 'service-b:20001', 'service-c:20002']

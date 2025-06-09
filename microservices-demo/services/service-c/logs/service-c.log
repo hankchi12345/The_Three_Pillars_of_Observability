@@ -1,0 +1,16 @@
+{"level":30,"time":1749448097059,"pid":19,"hostname":"ae2ead53e01d","msg":"service-c running at 20002"}
+{"level":30,"time":1749449366929,"pid":19,"hostname":"f189831e110c","msg":"service-c running at 20002"}
+{"level":30,"time":1749450135344,"pid":18,"hostname":"2cf29a8f0028","msg":"service-c running at 20002"}
+{"level":30,"time":1749450831824,"pid":19,"hostname":"63f541091a0e","msg":"Service service-c is running on port 20002"}
+{"level":30,"time":1749451760291,"pid":19,"hostname":"622cc7965076","msg":"Service service-c is running on port 20002"}
+{"level":30,"time":1749451785257,"pid":19,"hostname":"622cc7965076","msg":"Hello request received for service-c"}
+{"level":30,"time":1749451874683,"pid":19,"hostname":"622cc7965076","msg":"Hello request received for service-c"}
+{"level":30,"time":1749451894704,"pid":19,"hostname":"622cc7965076","msg":"Hello request received for service-c"}
+{"level":30,"time":1749452411579,"pid":19,"hostname":"e860d8376921","msg":"Service service-c is running on port 20002"}
+{"level":30,"time":1749453073522,"pid":19,"hostname":"a16061c3f063","msg":"Service service-c is running on port 20002"}
+{"level":30,"time":1749454213726,"pid":19,"hostname":"a16061c3f063","msg":"Hello request received for service-c"}
+{"level":30,"time":1749454863159,"pid":19,"hostname":"20a0357708a3","msg":"Service service-c is running on port 20002"}
+{"level":30,"time":1749455123420,"pid":19,"hostname":"20a0357708a3","msg":"Hello request received for service-c"}
+{"level":30,"time":1749455431936,"pid":19,"hostname":"add109261999","msg":"Service service-c is running on port 20002"}
+{"level":30,"time":1749456814335,"pid":19,"hostname":"8fa37c696acd","msg":"Service service-c is running on port 20002"}
+{"level":30,"time":1749456842474,"pid":19,"hostname":"cf6f91cb0309","msg":"Service service-c is running on port 20002"}

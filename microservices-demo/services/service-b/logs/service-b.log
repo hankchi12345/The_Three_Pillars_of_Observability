@@ -1,0 +1,31 @@
+{"level":30,"time":1749448099553,"pid":19,"hostname":"8d26946c5e16","msg":"service-b running at 20001"}
+{"level":30,"time":1749449365727,"pid":19,"hostname":"5d105f65298e","msg":"service-b running at 20001"}
+{"level":30,"time":1749450135161,"pid":19,"hostname":"58ea7b92f486","msg":"service-b running at 20001"}
+{"level":30,"time":1749450831715,"pid":18,"hostname":"31c7ba298fae","msg":"Service service-b is running on port 20001"}
+{"level":50,"time":1749451082985,"pid":18,"hostname":"31c7ba298fae","msg":"Service C unreachable from B: axios is not defined"}
+{"level":50,"time":1749451096798,"pid":18,"hostname":"31c7ba298fae","msg":"Service C unreachable from B: axios is not defined"}
+{"level":30,"time":1749451759696,"pid":19,"hostname":"9ad5a96f4bb4","msg":"Service service-b is running on port 20001"}
+{"level":30,"time":1749451776883,"pid":19,"hostname":"9ad5a96f4bb4","msg":"Hello request received for service-b"}
+{"level":30,"time":1749451889677,"pid":19,"hostname":"9ad5a96f4bb4","msg":"Hello request received for service-b"}
+{"level":50,"time":1749451943509,"pid":19,"hostname":"9ad5a96f4bb4","msg":"Service C unreachable from B: axios is not defined"}
+{"level":50,"time":1749452168988,"pid":19,"hostname":"9ad5a96f4bb4","msg":"Service C unreachable from B: axios is not defined"}
+{"level":50,"time":1749452175091,"pid":19,"hostname":"9ad5a96f4bb4","msg":"Service C unreachable from B: axios is not defined"}
+{"level":30,"time":1749452412621,"pid":19,"hostname":"124ee6eede3b","msg":"Service service-b is running on port 20001"}
+{"level":50,"time":1749452416469,"pid":19,"hostname":"124ee6eede3b","msg":"Service C unreachable from B: axios is not defined"}
+{"level":50,"time":1749452641679,"pid":19,"hostname":"124ee6eede3b","msg":"Service C unreachable from B: axios is not defined"}
+{"level":50,"time":1749452643733,"pid":19,"hostname":"124ee6eede3b","msg":"Service C unreachable from B: axios is not defined"}
+{"level":50,"time":1749452644478,"pid":19,"hostname":"124ee6eede3b","msg":"Service C unreachable from B: axios is not defined"}
+{"level":50,"time":1749452645073,"pid":19,"hostname":"124ee6eede3b","msg":"Service C unreachable from B: axios is not defined"}
+{"level":50,"time":1749452645894,"pid":19,"hostname":"124ee6eede3b","msg":"Service C unreachable from B: axios is not defined"}
+{"level":50,"time":1749452663413,"pid":19,"hostname":"124ee6eede3b","msg":"Service C unreachable from B: axios is not defined"}
+{"level":50,"time":1749452808529,"pid":19,"hostname":"124ee6eede3b","msg":"Service C unreachable from B: axios is not defined"}
+{"level":50,"time":1749452854472,"pid":19,"hostname":"124ee6eede3b","msg":"Service C unreachable from B: axios is not defined"}
+{"level":50,"time":1749452935975,"pid":19,"hostname":"124ee6eede3b","msg":"Service C unreachable from B: axios is not defined"}
+{"level":30,"time":1749453073838,"pid":18,"hostname":"e142cae9dfe6","msg":"Service service-b is running on port 20001"}
+{"level":50,"time":1749453074596,"pid":18,"hostname":"e142cae9dfe6","msg":"Service C unreachable from B: axios is not defined"}
+{"level":50,"time":1749453078510,"pid":18,"hostname":"e142cae9dfe6","msg":"Service C unreachable from B: axios is not defined"}
+{"level":50,"time":1749453097126,"pid":18,"hostname":"e142cae9dfe6","msg":"Service C unreachable from B: axios is not defined"}
+{"level":50,"time":1749453408343,"pid":18,"hostname":"e142cae9dfe6","msg":"Service C unreachable from B: axios is not defined"}
+{"level":50,"time":1749453948787,"pid":18,"hostname":"e142cae9dfe6","msg":"Service C unreachable from B: axios is not defined"}
+{"level":50,"time":1749454096951,"pid":18,"hostname":"e142cae9dfe6","msg":"Service C unreachable from B: axios is not defined"}
+{"level":50,"time":1749454796221,"pid":18,"hostname":"e142cae9dfe6","msg":"Service C unreachable from B: axios is not defined"}
